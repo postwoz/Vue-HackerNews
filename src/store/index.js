@@ -3,11 +3,10 @@ import Vuex from 'vuex';
 import mutations from './mutations.js';
 import actions from './actions.js';
 
-// Vuex 는 플러그인 형태로 사용된다.
 Vue.use(Vuex);   
 
 export const store = new Vuex.Store({
-    state:{
+    state: {
         news: [],
         jobs: [],
         asks: [],
@@ -16,13 +15,13 @@ export const store = new Vuex.Store({
         list: []
     },
     getters: {
-        fetchedAsk(state){            
+        fetchedAsk(state) {
             return state.asks;
         },
-        fetchedItem(state){
+        fetchedItem(state) {
             return state.item;
         },
-    },    
+    },
     mutations,
     actions
 });

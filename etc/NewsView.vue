@@ -1,32 +1,44 @@
 <template>
+
   <div>
     <list-item></list-item>
   </div>
+
 </template>
 
+
 <script>
+
 import ListItem from '../components/ListItem.vue';
 import bus from '../utils/bus.js';
 
-export default {
-  components:{
+export default 
+{
+  components: 
+  {
     ListItem
   },
-  created() {
+  created() 
+  {
     bus.$emit('start:spinner');
-    setTimeout(() => {    
+    setTimeout(() => 
+    {    
     this.$store.dispatch('FETCH_NEWS')
-      .then(() => {
+      .then(() => 
+      {
         console.log('fetched');
         bus.$emit('end:spinner');
       })
-      .catch((error) => {
+      .catch((error) => 
+      { 
         console.log(error);
       });
-      }, 2000);    
+    }, 2000);    
   }
 }
+
 </script>
+
 
 <style>
 
