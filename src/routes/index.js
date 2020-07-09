@@ -26,7 +26,6 @@ export const router = new VueRouter({
                 setTimeout(() => {
                     store.dispatch('FETCH_LIST', to.name)
                         .then(() => {
-                            console.log('fetched');
                             bus.$emit('end:spinner');
                             next();
                         })
@@ -45,7 +44,6 @@ export const router = new VueRouter({
                 setTimeout(() => {
                     store.dispatch('FETCH_LIST', to.name)
                         .then(() => {
-                            console.log('fetched');
                             next();
                         })
                         .catch((error) => {
@@ -63,7 +61,6 @@ export const router = new VueRouter({
                 setTimeout(() => {
                     store.dispatch('FETCH_LIST', to.name)
                         .then(() => {
-                            console.log('fetched');
                             bus.$emit('end:spinner');
                             next();
                         })
