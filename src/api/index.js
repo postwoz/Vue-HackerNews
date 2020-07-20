@@ -1,4 +1,9 @@
 import axios from 'axios';
+import Cors from 'cors';
+
+// CORS 설정
+const cors = require('cors');
+Cors.use(cors());
 
 
 // 1. HTTP Request & Response 와 관련된 기본 설정
