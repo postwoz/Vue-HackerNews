@@ -22,13 +22,11 @@ export default {
     ToolBar,
     Spinner
   },
-
   data() {
     return {
       loadingStatus: false,
     };
   },
-
   methods: {
     startSpinner() {
       this.loadingStatus = true;
@@ -37,12 +35,10 @@ export default {
       this.loadingStatus = false;
     }
   },
-
   created() {
     bus.$on('start:spinner', this.startSpinner);
     bus.$on('end:spinner', this.endSpinner);
   },
-
   beforeDestroy() {
     bus.$off('start:spinner', this.startSpinner);
     bus.$off('end:spinner', this.endSpinner);
